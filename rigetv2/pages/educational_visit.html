@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../css/info_bar.css">
+    <link rel="stylesheet" href="../css/educational_page.css">
+</head>
+<body>
+
+    <!-- ================= HERO SECTION ================= -->
+    <div id="hero">
+
+        <!-- Dynamic info bar -->
+        <div id="info_bar"></div>
+
+
+        <!-- Dynamic top navigation bar -->
+        <div id="top_bar"></div>
+
+        <!-- Hero content -->
+        <div class="container_hero">
+            <div>specialty designed tours and learning experiences!</div>
+
+            <div>
+                <a class="button" href="../pages/booking.html">Book Tickets</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- ================= END HERO SECTION ================= -->
+
+
+    <!-- Attractions section -->
+    <div id="our_attractions"></div>
+
+    <!-- Educational section -->
+    <div id="educational_section"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+
+    <!-- ================= SCRIPT SECTION ================= -->
+    <script>
+        /**
+         * Utility function to load HTML partials into a target element
+         */
+        function loadSection(path, targetId, callback) {
+            fetch(path)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                    if (callback) callback();
+                })
+                .catch(err => console.error(`Error loading ${path}:`, err));
+        }
+
+        // Load top bar and attach burger menu functionality
+        loadSection("../sections/top_bar.html", "top_bar", () => {
+            const burger = document.getElementById("burger");
+            const navLinks = document.getElementById("nav_links");
+
+            if (burger && navLinks) {
+                burger.addEventListener("click", () => {
+                    navLinks.classList.toggle("open");
+                });
+            }
+        });
+
+        // Load remaining reusable sections
+        loadSection("../sections/info_bar.php", "info_bar");
+        loadSection("../sections/educational.html", "educational_section");
+        loadSection("../sections/footer.html", "footer");
+    </script>
+    <!-- ================= END SCRIPT SECTION ================= -->
+
+</body>
+</html>

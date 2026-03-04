@@ -1,0 +1,76 @@
+.maincontent{
+   height: auto;
+   margin-top: 6vh;
+   padding-top: 10vh;
+   padding-bottom: 1vh;
+   width: 100vw;
+   background-image: url("../images/zoo_hero.webp");
+   background-position: center;
+   border-image-repeat: none;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   padding-bottom: 10vh;
+}
+
+body{
+   background-color: black;
+   height: 100vh;
+   width: 100vw;
+}
+
+*{
+   margin: 0;
+}
+
+form{
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   width: 90%;
+   gap: 10px;
+}
+
+form input{
+   width: 100%;
+   padding: 5px;
+   border-radius: 10px;
+}
+
+form button{
+   background-color: white;
+   padding: 10px;
+   width: 100px;
+   border-radius: 10px;
+}
+
+#form_container{
+   gap: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   
+   background-color: rgba(0, 0, 0,0.8);
+   width: 40%;
+   max-width: 500px;
+   padding: 2vw;
+   border-radius: 20px;
+   min-width: 400px;
+}
+
+@media (max-width:600px) {
+
+   .maincontent{
+      margin-top: 50vh;
+   }
+
+   #form_container{
+      width: 80%;
+   }
+
+}

@@ -1,0 +1,145 @@
+.button{
+    text-decoration: none;
+    color: black;
+    background-color: #faca39;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+
+/* Overall container */
+#our_attractions {
+    padding-top: 5vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'MaryKate', cursive; /* Use your font if available */
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Title */
+#title {
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 3px solid #faca39; /* yellow underline */
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+    padding-bottom: 0.5rem;
+}
+
+/* Subtitle - the "Our Giraffes Euan and Evan!" etc */
+.subtitle {
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    color: white;
+}
+
+
+/* Animal card flex container */
+.animal_card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* Alternate layout: odd cards image left, even cards image right */
+.animal_card:nth-child(3n+1) { /* 1,4,7 ... first animal card in group */
+    flex-direction: row;
+}
+
+.animal_card:nth-child(3n+2) { /* 2,5,8 ... second animal card */
+    flex-direction: row-reverse;
+}
+
+.animal_card:nth-child(3n+3) { /* 3,6,9 ... third animal card */
+    flex-direction: row;
+}
+
+/* Images container */
+#our_attractions .animal_card > div[id$="_image"] {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    height:24vw;
+}
+
+/* Specific image backgrounds */
+#standard_room_image {
+    background-image: url('../images/standard.webp');
+}
+
+#deluxe_room_image {
+    background-image: url('../images/premium.webp');
+}
+
+#suite_room_image {
+    background-image: url('../images/executive.webp');
+}
+
+
+/* Animal info box */
+.animal_info {
+    flex: 1;
+    background-color: #faca39;
+    color: black;
+    padding: 1.5rem 2rem;
+    font-size: 2.7vw;
+    height:24vw;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#footer{
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .animal_card {
+        flex-direction: column !important;
+    }
+
+    #our_attractions .animal_card > div[id$="_image"],
+    .animal_info {
+        width: 100%;
+        height: 180px;
+    }
+
+    .animal_info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3vw;
+        margin-top: 1rem;
+    }
+
+    .subtitle {
+        font-size: 9vw;
+        font-weight: bold;
+        text-align: center;
+        margin: 2rem 0 1rem 0;
+        color: white;
+    }
+
+    #title {
+        font-size: 10vw;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        border-bottom: 3px solid #faca39; /* yellow underline */
+        width: fit-content;
+        margin: 0 auto 2rem auto;
+        padding-bottom: 0.5rem;
+    }
+}

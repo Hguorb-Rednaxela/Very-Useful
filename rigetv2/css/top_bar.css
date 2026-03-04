@@ -1,0 +1,127 @@
+/* Reset and basic body */
+* {
+    margin: 0;
+}
+
+body {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'MaryKate';
+}
+body{overflow-x: hidden;}
+/* Font */
+@font-face {
+    font-family: 'MaryKate';
+    src: url('../fonts/marykate-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Top bar container */
+#top_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, nav+user right */
+    background-color: #faca39;
+    height: 7vh;
+    width: 90%;
+    font-size: 25px;
+    border-radius: 30vw;
+    padding: 0 2vw;
+    position: relative; /* anchor for mobile dropdown */
+}
+
+/* Logo */
+#logo {
+    width: 60px;
+}
+
+/* Container for nav links + user icon */
+#right_container {
+    display: flex;
+    align-items: center;
+    gap: vw; /* spacing between nav links and user icon */
+}
+
+/* Nav links */
+#nav_links {
+    display: flex;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top_bar a {
+    color: black;
+    text-decoration: none;
+}
+
+/* User icon */
+#user_icon {
+    width: 65px;
+}
+
+/* Burger icon (hidden on desktop) */
+#burger {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Responsive / Mobile */
+@media (max-width: 768px) {
+
+    /* Show burger icon */
+    #burger {
+        display: block;
+    }
+
+    /* Nav dropdown */
+    #nav_links {
+        position: absolute;
+        top: 100%;               /* below top bar */
+        left: 50%;               /* center horizontally */
+        transform: translateX(-50%);
+        background-color: #faca39;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        font-size: 22px;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0 0 20px 20px;
+        align-items: center;
+    }
+
+    /* Show dropdown when open */
+    #nav_links.open {
+        display: flex;
+    }
+
+    /* Top bar full width on mobile */
+    #top_bar {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    /* Smaller user icon on mobile */
+    #user_icon {
+        width: 55px;
+    }
+
+    /* Logo adjustments */
+    #logo {
+        width: 60px;
+        padding-left: 0;
+    }
+
+    /* Right container becomes vertical in mobile */
+    #right_container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

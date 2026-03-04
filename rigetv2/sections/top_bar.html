@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/top_bar.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="top_bar">
+    <a href="../pages/index.php"><img id="logo" src="../images/logo.webp" alt="logo"></a>
+    
+
+    <!-- Navigation -->
+    <div id="nav_links">
+        <a href="../pages/index.php">ZOO</a>
+        <a href="../pages/hotel.html">HOTELS</a>
+        <a href="../pages/booking.html">BOOKING</a>
+        <a href="../pages/educational_visit.html">EDUCATIONAL VISITS</a>
+        <a href="../pages/user.php"><img id="user_icon" src="../images/user.webp" alt=""></a>
+    </div>
+
+    <!-- Burger -->
+    <div id="burger" onclick="toggleMenu()">☰</div>
+</div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav_links").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>

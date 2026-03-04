@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color:  white;
+}
+
+#info_bar,
+#footer{
+    width: 100%;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-self: last baseline;
+}
+
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { padding: 10px; border: 1px solid #000000; text-align: center; }
+th {
+    background-color: #555; 
+    color: white;           
+}
+
+.cancel-btn {
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+.no-bookings {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+}
+form { margin: 0; }
+.button-box {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+.button-box a {
+    text-decoration: none;
+    color: white;
+    background-color: #faca39;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.button-box a:hover {
+    background-color: #e0b231;
+}

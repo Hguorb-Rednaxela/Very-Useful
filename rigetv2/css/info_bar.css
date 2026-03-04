@@ -1,0 +1,23 @@
+#info_bar .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    background-color: black;
+    height: auto;
+    padding: 0.5vw 2vw;
+}
+
+body{
+    margin: 0;
+}
+body{overflow-x: hidden;}
+@media (max-width: 768px) {
+    #info_bar .container{
+        flex-direction: column;
+        gap: 2vw;
+        padding: 2vh 0;
+    }
+}
